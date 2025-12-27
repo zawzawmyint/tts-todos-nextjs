@@ -45,11 +45,19 @@ Follow these steps to get the project running locally:
    pnpm install
    ```
 
-3. **Run the development server**
+3. **Configure Environment Variables**
+
+   Copy the example environment file:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+4. **Run the development server**
 
    ```bash
    pnpm run dev
    ```
 
-4. **Open the application**
+5. **Open the application**
    Open [http://localhost:3000](http://localhost:3000) in your browser.

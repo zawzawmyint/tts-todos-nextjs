@@ -10,6 +10,7 @@ import { useEffect } from "react";
 
 const Page = () => {
   const { data: session } = authClient.useSession();
+  console.log("sign-in session", session);
   const router = useRouter();
 
   useEffect(() => {

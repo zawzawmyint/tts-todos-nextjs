@@ -41,7 +41,8 @@ export function Login() {
           toast.success("SUCCESS", {
             description: "Login successfully",
           });
-          router.push("/"); // or your desired route
+          router.push("/"); // or your desired
+          console.log("sign in reslut token", result.data.token);
         } else {
           throw new Error();
         }
