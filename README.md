@@ -73,3 +73,19 @@ _Note: Please be patient with the initial login - Express backend API is hosted 
 ### Backend todos repository
 
 [https://github.com/zawzawmyint/tts-todos-api](https://github.com/zawzawmyint/tts-todos-api)
+
+### 🧠 My Thought Process
+
+For this project, I wanted to build more than just a basic list. I focused on making a tool that feels like a real product. Here is why I chose these features:
+
+- **Next.js & React 19**: I used the newest versions of React to keep the app fast and modern.
+
+- **Context API**: I used this to manage the Todo list globally. I also added a special feature to hide "Done" items so users can stay organized.
+
+- **Categories & Priority**: I added these because real tasks have different levels of importance. Users can tag tasks (like "Work" or "Study", "Entertainment", "Family") and set a Priority (Low, Medium, High) to manage their time better.
+
+- **Shadcn UI & Tailwind CSS**: I used these to make the app look professional and make sure it works perfectly on mobile phones.
+
+- **Forms & Validation**: I used React Hook Form and Zod to catch errors early and help users fill out the forms correctly.
+
+- **Custom Backend & Auth**: I built my own Express API and added Login/Sign-up (Better Auth) to show how I handle secure user data and real database connections.
