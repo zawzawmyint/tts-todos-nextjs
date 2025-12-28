@@ -20,7 +20,7 @@ export function AvatarProfile() {
   return (
     <TooltipBox title={session ? "Logout" : "Login"}>
       <div
-        className="flex flex-row flex-wrap items-center gap-4 hover:shadow-sm shadow-black/50 rounded-3xl p-1 px-2 cursor-pointer"
+        className="flex flex-row flex-wrap items-center gap-4 hover:shadow-xs shadow-black/50 rounded-3xl p-1 cursor-pointer"
         onClick={handleLogout}
       >
         <Avatar>
@@ -35,7 +35,7 @@ export function AvatarProfile() {
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         {session && (
-          <div className="flex items-center gap-2 text-lg">
+          <div className="flex items-center gap-2 text-sm">
             {session?.user.name} <LogOut size={18} />
           </div>
         )}

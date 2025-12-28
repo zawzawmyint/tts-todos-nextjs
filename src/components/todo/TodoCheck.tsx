@@ -7,6 +7,7 @@ import { LoaderCircle } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 import { useTransition } from "react";
+import { toast } from "sonner";
 
 export function TodoCheck({
   item,
@@ -25,10 +26,12 @@ export function TodoCheck({
           ...item,
           completed: !item.completed,
         });
+        toast.success("Todo checked successfully");
         console.log(res);
         loadTodos();
       } catch (error) {
         console.log("Update complete");
+        toast.error("Todo check failed");
       }
     });
   };

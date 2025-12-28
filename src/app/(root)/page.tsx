@@ -8,14 +8,13 @@ import Link from "next/link";
 export default function Home() {
   // const session = await auth();
   const { data: session } = authClient.useSession();
-  console.log("HOmePagesession", session);
   return (
     <BaseContainer>
       <div className="max-w-5xl mx-auto h-125 p-2 flex flex-col justify-center items-center text-center gap-6">
-        <h1 className="text-5xl sm:text-8xl font-bold tracking-wide">
+        <h1 className="text-5xl sm:text-8xl font-bold opacity-75 tracking-wide">
           ClearMind, Progress Path, Momentum
         </h1>
-        <p className="font-medium">
+        <p className="font-medium ">
           Transform overwhelming lists into achievable victories. Smart task
           management that adapts to your workflow, helping you focus on what
           truly matters.

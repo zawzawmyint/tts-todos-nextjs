@@ -10,25 +10,20 @@ export async function fetchAllTodos(
 ): Promise<TodosResponse> {
   const endpoint = `/api/todos?category=${category}&priority=${priority}`;
 
-  try {
-    const response = await fetch(`${API_BASE_URL}${endpoint}`, {
-      credentials: "include",
-    });
+  const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+    credentials: "include",
+  });
 
-    if (!response.ok) {
-      const errorData = await response.text();
-      throw new Error(
-        `Failed to fetch Todos: ${response.status} ${response.statusText}. Details: ${errorData}`
-      );
-    }
-
-    const data = await response.json();
-
-    return data;
-  } catch (error) {
-    console.log("Error fetching Todos:", error);
-    throw new Error("Error feching Todos"); // This will activate the closest `error.js` Error Boundary
+  if (!response.ok) {
+    const errorData = await response.text();
+    throw new Error(
+      `Failed to fetch Todos: ${response.status} ${response.statusText}. Details: ${errorData}`
+    );
   }
+
+  const data = await response.json();
+
+  return data;
 }
 
 export async function addTodo(todo: {
@@ -38,8 +33,6 @@ export async function addTodo(todo: {
   category: string;
 }): Promise<TodoResponse> {
   const endpoint = "/api/todos";
-  console.log(endpoint);
-  console.log("add todo", todo);
 
   const response = await fetch(`${API_BASE_URL}${endpoint}`, {
     credentials: "include",
@@ -72,7 +65,6 @@ export async function updateTodo(
   }
 ): Promise<TodoResponse> {
   const endpoint = `/api/todos/${id}`;
-  console.log("update todo", todo);
 
   const response = await fetch(`${API_BASE_URL}${endpoint}`, {
     credentials: "include",
@@ -102,7 +94,6 @@ export async function updateCompleted(
   todo: Todo
 ): Promise<TodoResponse> {
   const endpoint = `/api/todos/${id}`;
-  console.log("update todo", todo);
 
   const response = await fetch(`${API_BASE_URL}${endpoint}`, {
     credentials: "include",
@@ -128,7 +119,6 @@ export async function updateCompleted(
 }
 export async function deleteTodo(id: string): Promise<TodoResponse> {
   const endpoint = `/api/todos/${id}`;
-  console.log("delete todo", id);
 
   const response = await fetch(`${API_BASE_URL}${endpoint}`, {
     credentials: "include",

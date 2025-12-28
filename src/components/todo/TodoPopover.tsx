@@ -24,7 +24,7 @@ export function TodoPopover({
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button size={"icon"} variant={"ghost"}>
+        <Button size={"icon"} variant={"secondary"}>
           <EllipsisIcon />
         </Button>
       </PopoverTrigger>

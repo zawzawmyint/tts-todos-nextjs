@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { deleteTodo } from "@/services/todo-endpoints";
 import React, { useTransition } from "react";
+import { toast } from "sonner";
 
 const TodoDelete = ({
   id,
@@ -16,10 +17,11 @@ const TodoDelete = ({
     startTransition(async () => {
       try {
         const res = await deleteTodo(id);
-        console.log(res);
+        toast.success("Todo deleted successfully");
         loadTodos();
       } catch (error) {
         console.log("delete complete");
+        toast.error("Todo delete Failed");
       }
     });
   };

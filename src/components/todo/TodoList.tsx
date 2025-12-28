@@ -8,7 +8,6 @@ const TodoList = ({
   todos: Todo[];
   loadTodos: () => void;
 }) => {
-  console.log("todo list", todos);
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
       {todos.map((item) => (

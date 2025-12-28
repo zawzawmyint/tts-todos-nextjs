@@ -42,7 +42,6 @@ export function Login() {
             description: "Login successfully",
           });
           router.push("/"); // or your desired
-          console.log("sign in reslut token", result.data.token);
         } else {
           throw new Error();
         }

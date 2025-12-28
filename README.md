@@ -8,12 +8,14 @@ TTS Todos is a streamlined task management application that helps users organize
 
 ## Features
 
-- **Authentication**: Secure Sign In and Sign Up functionality powered by Better Auth.
-- **Task Management**: Full CRUD (Create, Read, Update, Delete) capabilities for todos.
+- **User Authentication**: Secure sign-up and sign-in functionality powered by [Better Auth](https://www.better-auth.com/).
+- **Todo Management**: Full CRUD (Create, Read, Update, Delete) operations for todos.
+- **Categorization & Prioritization**: Organize todos with categories (e.g., WORK) and priority levels (LOW, MEDIUM, HIGH).
 - **Task Status**: Easily mark items as complete or incomplete.
 - **Modern UI**: Polished, responsive design using Tailwind CSS and Radix UI primitives.
 - **Form Validation**: Robust input handling with Zod and React Hook Form.
 - **Notifications**: Instant feedback with toast notifications.
+- **User-Centric Design**: All data is scoped to the authenticated user.
 
 ## Tech Stack
 
@@ -61,3 +63,13 @@ Follow these steps to get the project running locally:
 
 5. **Open the application**
    Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Host on Vercel
+
+[https://tts-todos-nextjs.vercel.app/](https://tts-todos-nextjs.vercel.app/)
+
+_Note: Please be patient with the initial login - Express backend API is hosted on Render's free tier, so initial API responses might take a few seconds to load due to cold starts._
+
+### Backend todos repository
+
+[https://github.com/zawzawmyint/tts-todos-api](https://github.com/zawzawmyint/tts-todos-api)
