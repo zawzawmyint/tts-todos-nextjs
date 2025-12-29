@@ -89,3 +89,5 @@ For this project, I wanted to build more than just a basic list. I focused on ma
 - **Forms & Validation**: I used React Hook Form and Zod to catch errors early and help users fill out the forms correctly.
 
 - **Custom Backend & Auth**: I built my own Express API and added Login/Sign-up (Better Auth) to show how I handle secure user data and real database connections.
+
+### Screen Recording (Google Drive) : [https://drive.google.com/file/d/1sd3RtKtWIR45HVPPz2XRvPllZ-zsEfkm/view?usp=sharing](https://drive.google.com/file/d/1sd3RtKtWIR45HVPPz2XRvPllZ-zsEfkm/view?usp=sharing)
